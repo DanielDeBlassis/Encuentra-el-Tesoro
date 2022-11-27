@@ -6,3 +6,4 @@ let target = {
     y: getRandomNumber(HEIGH)
 };
 
+const $mapa = document.querySelector("#mapa");
