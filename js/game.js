@@ -7,3 +7,4 @@ let target = {
 };
 
 const $mapa = document.querySelector("#mapa");
+let nroClicks = 0;
