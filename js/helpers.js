@@ -20,3 +20,44 @@ let getDistance = (e, target) => {
     return Math.sqrt((diffX * diffX) + (diffY + diffY));
 };
 
+/**
+ * Toma como parámetro la distancia entre el click y el tesoro y muestra una pista según la cercanía
+ * @param {Number} distance distancia del click al tesoro
+ * @returns mensaje indicando la cercanía
+ */
+let getDistanceHint = distance => {
+    let texto = "";
+    let color = "";
+
+    if (distance < 30) {
+        texto = "Casi lo tienes";
+        color = "green"
+        return mensaje(texto, color);
+    } else if (distance < 40) {
+        texto = "Muy caliente";
+        color = "red";
+        return mensaje(texto, color);
+    } else if (distance < 60) {
+        texto = "Caliente";
+        color = "orange";
+        return mensaje(texto, color);
+    } else if (distance < 100) {
+        texto = "Tibio";
+        color = "yellow";
+        let colorTexto = "black";
+        return mensaje(texto, color, colorTexto);
+    } else if (distance < 180) {
+        texto = "Frío";
+        color = "bluelight"
+        return mensaje(texto, color);
+    } else if (distance < 360) {
+        texto = "Muy frío";
+        color = "blue";
+        return mensaje(texto, color);
+    } else {
+        texto = "Congelado";
+        color = "blueviolet";
+        return mensaje(texto, color);
+    }
+}
+
