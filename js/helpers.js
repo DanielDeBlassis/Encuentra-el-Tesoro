@@ -61,3 +61,24 @@ let getDistanceHint = distance => {
     }
 }
 
+/**
+ * Genera un mensaje de tipo toastify adaptado
+ * @param {*String} texto mensaje a mostrar
+ * @param {*String} color color de fondo
+ * @param {*String} colorTexto color del texto
+ */
+function mensaje(texto, color, colorTexto = "white") {
+    Toastify({
+
+        text: `${texto}`,
+        gravity: "top",
+        position: "right",
+
+        duration: 1000,
+        style: {
+            background: `${color}`,
+            color: `${colorTexto}`,
+        }
+
+    }).showToast();
+}
