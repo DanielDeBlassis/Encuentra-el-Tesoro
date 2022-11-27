@@ -12,7 +12,7 @@ let nroClicks = 0;
 $mapa.addEventListener("click", (e) => {
     nroClicks++;
     let distance = getDistance(e, target);
-    
+
     getDistanceHint(distance);
 
     if (distance < 10) {
@@ -35,3 +35,4 @@ $mapa.addEventListener("click", (e) => {
                 window.location.reload();
             });
     }
+});
